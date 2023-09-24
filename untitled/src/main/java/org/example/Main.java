@@ -13,6 +13,6 @@ public class Main {
         scanner.close();
         CartesianPlane plane = new CartesianPlane(x1,y1);
         Robot robot = new Robot(plane.getX(), plane.getY(), angle, beam,distance);
-        robot.findObstacle();
+        System.out.println(robot.findObstacle());
     }
 }
