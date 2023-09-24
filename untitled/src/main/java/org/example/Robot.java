@@ -10,16 +10,16 @@ class Robot {
     private int angle = 90;
 
     public Robot(int x, int y, int beam, int distance) {
-        this.x = Objects.requireNonNull(x,"Null Values for X are Not allowed");
-        this.y = Objects.requireNonNull(y,"Null Values for Y are Not allowed");
-        this.beam = Objects.requireNonNull(beam,"Null Values for beam are Not allowed");
-        this.distance = Objects.requireNonNull(distance,"Null Values for Distance are Not allowed");
+        this.x = x;
+        this.y = y;
+        this.beam = beam;
+        this.distance = distance;
     }
     public Robot(int x, int y, int beam, int distance,int angle) {
-        this.x = Objects.requireNonNull(x,"Null Values for X are Not allowed");
-        this.y = Objects.requireNonNull(y,"Null Values for Y are Not allowed");
-        this.beam = Objects.requireNonNull(beam,"Null Values for beam are Not allowed");
-        this.distance = Objects.requireNonNull(distance,"Null Values for Distance are Not allowed");
+        this.x = x;
+        this.y = y;
+        this.beam = beam;
+        this.distance = distance;
         this.angle = angle;
     }
 
@@ -28,11 +28,11 @@ class Robot {
         if (beam < 0 || beam > 180 || distance < 0 || distance > 800) {
             return "Erro";}
         else {
-            int deltaX = (int) (distance * Math.cos(Radians));
-            int deltaY = (int) (distance * Math.sin(Radians));
+            this.x += (int) (distance * Math.cos(Radians));
+            this.y += (int) (distance * Math.sin(Radians));
             StringBuilder cordenates = new StringBuilder("(");
-            cordenates.append(deltaX);cordenates.append(",");
-            cordenates.append(deltaY);cordenates.append(")");
+            cordenates.append(x);cordenates.append(",");
+            cordenates.append(y);cordenates.append(")");
             return cordenates.toString();
         }
     }
