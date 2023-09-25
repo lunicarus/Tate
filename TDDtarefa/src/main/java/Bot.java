@@ -24,12 +24,4 @@ public class Bot {
         coordinates.append("(").append(obstacleX).append(",").append(obstacleY).append(")");
         return coordinates.toString();
     }
-
-    public int getBeam() {
-        return this.beam;
-    }
-
-    public int getDistance() {
-        return distance;
-    }
 }
