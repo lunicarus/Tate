@@ -11,9 +11,9 @@ class ObstacleDetectionTest {
         int y = 4;
         int angle = 45;
         int beam = 135;
-        int distance = -1;
+        int distance = 10;
         Bot testRobot = new Bot(x,y,angle,beam,distance);
-        assertThat(testRobot.getBeam()).isBetween(-90,90);
+        assertThat(testRobot.findObstacle()).isNotEqualTo("Erro");
 
     }
     @Test
@@ -23,9 +23,9 @@ class ObstacleDetectionTest {
         int y = 4;
         int angle = 45;
         int beam = 135;
-        int distance = 1;
+        int distance = -1;
         Bot testRobot = new Bot(x,y,angle,beam,distance);
-        assertThat(testRobot.getDistance()).isGreaterThan(0);
+        assertThat(testRobot.findObstacle()).isEqualTo("Erro");
 
     }
     @Test
