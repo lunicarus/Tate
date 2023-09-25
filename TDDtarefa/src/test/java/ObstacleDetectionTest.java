@@ -65,4 +65,15 @@ class ObstacleDetectionTest {
         assertThat(testRobot.findObstacle()).isEqualTo("Erro");
 
     }
+    @Test
+    @DisplayName("Should return (10,20)")
+    void ShouldReturn1020(){
+        int x = 10;
+        int y = 10;
+        int angle = 45;
+        int beam = 45;
+        int distance = 10;
+        Bot testRobot = new Bot(x,y,angle,beam,distance);
+        assertThat(testRobot.findObstacle()).isEqualTo("(10,20)");
+    }
 }
