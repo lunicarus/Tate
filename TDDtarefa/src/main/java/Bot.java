@@ -1,8 +1,12 @@
 public class Bot {
-    int angle;
-    int beam;
-    int distance;
+    private int x;
+    private int y;
+    private int angle;
+    private int beam;
+    private int distance;
     public Bot(int x, int y, int angle, int beam, int distance) {
+        this.x = x;
+        this.y = y;
         this.angle = angle;
         this.beam = beam-90;
         this.distance = distance;
