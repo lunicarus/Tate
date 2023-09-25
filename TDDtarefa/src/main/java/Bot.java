@@ -4,7 +4,7 @@ public class Bot {
     int distance;
     public Bot(int x, int y, int angle, int beam, int distance) {
         this.angle = angle;
-        this.beam = beam;
+        this.beam = beam-90;
         this.distance = distance;
 
     }
