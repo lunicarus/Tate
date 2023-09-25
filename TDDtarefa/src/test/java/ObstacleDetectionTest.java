@@ -42,8 +42,8 @@ class ObstacleDetectionTest {
 
     }
     @Test
-    @DisplayName("Beam interval is between 0 and 180")
-    void beamIsBetween0And180(){
+    @DisplayName("Beam is between 0 and 180")
+    void beamIsBetween0180(){
         int x = -4;
         int y = 4;
         int angle = 45;
@@ -51,6 +51,18 @@ class ObstacleDetectionTest {
         int distance = 4;
         Bot testRobot = new Bot(x,y,angle,beam,distance);
         assertThat(testRobot.findObstacle()).isNotEqualTo("Erro");
+
+    }
+    @Test
+    @DisplayName("Distance greater than 0")
+    void DistanceGreaterThan0(){
+        int x = -4;
+        int y = 4;
+        int angle = 45;
+        int beam = 135;
+        int distance = -1;
+        Bot testRobot = new Bot(x,y,angle,beam,distance);
+        assertThat(testRobot.findObstacle()).isEqualTo("Erro");
 
     }
 }
