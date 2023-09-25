@@ -14,7 +14,7 @@ public class Bot {
     }
 
     public String findObstacle() {
-        if (beam < -90 || beam > 90 || distance < 0) {
+        if (beam < -90 || beam > 90 || distance <= 0 || distance > 8) {
             return "Erro";}
         double polarCoordinate =  distance;
         double Radians = Math.toRadians(angle) - Math.toRadians(beam);
