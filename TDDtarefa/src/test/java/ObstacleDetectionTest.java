@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.*;
 class ObstacleDetectionTest {
 
     @Test
-    @DisplayName("ShouldReturn (0,5)")
+    @DisplayName("Should Return (0,5)")
     void ShouldReturn05(){
     int x = 0;
     int y = 0;
@@ -17,7 +17,7 @@ class ObstacleDetectionTest {
         assertThat(testRobot.findObstacle()).isEqualTo("(0,5)");
     }
     @Test
-    @DisplayName("beam is greater than 90")
+    @DisplayName("Beam is greater than 90")
     void beamGreaterThan90Test(){
         int x = 0;
         int y = 0;
