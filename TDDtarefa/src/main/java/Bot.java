@@ -10,7 +10,7 @@ public class Bot {
     }
 
     public String findObstacle() {
-        if (beam < -90 || beam > 90) {
+        if (beam < -90 || beam > 90 || distance < 0) {
             return "Erro";}
         return "(0,5)";
     }
